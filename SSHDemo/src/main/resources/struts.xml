@@ -4,6 +4,9 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+
     <package name="ssh" extends="struts-default" namespace="/">
        <!-- <action name="product_*" class="productAction" method="{1}">
         </action>-->
@@ -25,5 +28,14 @@
             <result name="updateSuccess" type="redirectAction">department_findAll.action</result>
             <result name="deleteSuccess" type="redirectAction">department_findAll.action</result>
         </action>
+    </package>
+    
+    <package name="demo01" extends="struts-default" namespace="/">
+        <action name="Demo01Action" class="com.koali.action.Demo01Action" method="execute">
+            <result name="success">
+                /jsp/test/index.jsp
+            </result>
+        </action>
+
     </package>
 </struts>
