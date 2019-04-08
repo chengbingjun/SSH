@@ -27,8 +27,8 @@ public class DepartmentDaoTest extends HibernateDaoSupport{
 
     @Test
     public void findById() throws Exception {
-        Department department = this.getHibernateTemplate().get(Department.class, 1);
-        System.out.println(department.getDname());
+//        Department department = this.getHibernateTemplate().get(Department.class, 1);
+//        System.out.println(department.getDname());
     }
 
 }
