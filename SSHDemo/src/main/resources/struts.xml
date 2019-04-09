@@ -37,5 +37,26 @@
             </result>
         </action>
 
+        <action name="Demo02Action_*" class="com.koali.action.Demo02Action" method="{1}">
+            <result name="success">
+                /jsp/test/index.jsp
+            </result>
+            <result name="input">
+                /jsp/test/user.jsp
+            </result>
+        </action>
+
+        <action name="Demo03Action_*" class="com.koali.action.Demo03Action" method="{1}">
+            <result name="success">
+                /jsp/test/index.jsp
+            </result>
+        </action>
+
+        <action name="Demo04Action_*" class="com.koali.action.Demo04Action" method="{1}">
+            <result name="success">
+                /jsp/test/index.jsp
+            </result>
+        </action>
+
     </package>
 </struts>
