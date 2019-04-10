@@ -31,10 +31,24 @@
     </package>
     
     <package name="demo01" extends="struts-default" namespace="/">
+
+        <interceptors>
+            <!--自定义拦截器-->
+            <interceptor name="testInterceptor" class="com.koali.Interceptor.MyInterceptor"/>
+            <!--自定义拦截器栈-->
+            <interceptor-stack name="testInterceptorStack">
+                <interceptor-ref name="testInterceptor"/>
+                <!--struts2 默认拦截器栈-->
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
         <action name="Demo01Action" class="com.koali.action.Demo01Action" method="execute">
             <result name="success">
                 /jsp/test/index.jsp
             </result>
+            <!--引入自定义拦截器栈：又会执行struts2 默认的拦截器，也会执行自定义拦截器（testInterceptor）-->
+            <interceptor-ref name="testInterceptorStack"/>
         </action>
 
         <action name="Demo02Action_*" class="com.koali.action.Demo02Action" method="{1}">

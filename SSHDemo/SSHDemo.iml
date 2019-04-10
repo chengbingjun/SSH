@@ -10,13 +10,22 @@
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
         </sourceRoots>
       </configuration>
       <facet type="Struts2" name="Struts 2">
         <configuration>
-          <propertiesKeys disabled="false" />
+          <propertiesKeys disabled="true" />
+        </configuration>
+      </facet>
+      <facet type="struts" name="Struts">
+        <configuration>
+          <option name="myStrutsValidationEnabled" value="true" />
+          <option name="myTilesValidationEnabled" value="true" />
+          <option name="myValidatorValidationEnabled" value="true" />
+          <option name="myReportErrorsAsWarnings" value="true" />
+          <option name="mySuppressPropertiesValidation" value="false" />
         </configuration>
       </facet>
     </facet>
@@ -66,6 +75,24 @@
     <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.38" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.0.16" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.alibaba:jconsole:1.8.0">
+        <CLASSES>
+          <root url="jar://D:/jdk1.8.0_171/lib/jconsole.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.alibaba:tools:1.8.0">
+        <CLASSES>
+          <root url="jar://D:/jdk1.8.0_171/lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.0.6.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />

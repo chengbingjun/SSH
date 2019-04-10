@@ -2,7 +2,6 @@ package com.koali.action;
 
 import com.koali.pojo.Card;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.interceptor.validation.SkipValidation;
 
 /**
  * 动态参数封装之属性驱动
@@ -41,9 +40,6 @@ public class Demo02Action extends ActionSupport{
 
     public void validate(){
         System.out.println("validate");
-//        if(username == null || username.trim().equals("")||username.length()==0){
-//            addFieldError("username","请输入有效用户名");
-//        }
     }
 
     public void validateFindUser(){
