@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Created by Elric on 2017/5/6.
  */
 @Action(value = "productAction")
-public class ProductAction extends ActionSupport   implements ModelDriven<Product> {
+public class ProductAction extends ActionSupport implements ModelDriven<Product> {
         //product对象的属性通过ModelDriven从http请求中获取到
         private Product product = new Product();
         ProductService productService;
