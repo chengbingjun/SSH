@@ -17,11 +17,11 @@ import static org.junit.Assert.*;
 public class ProductDaoTest {
     @Autowired
     private ProductDao productDao;
-    @Test
-    public void save() throws Exception {
-        Product product = new Product();
-        product.setPname("电视机");
-        product.setPrice(2300.0);
-        productDao.save(product);
-    }
+//    @Test
+//    public void save() throws Exception {
+//        Product product = new Product();
+//        product.setPname("电视机");
+//        product.setPrice(2300.0);
+//        productDao.save(product);
+//    }
 }

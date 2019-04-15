@@ -58,6 +58,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd http://www.alibaba.com/sc
                 <value>hbm/Product.hbm.xml</value>
                 <value>hbm/Department.hbm.xml</value>
                 <value>hbm/Employee.hbm.xml</value>
+                <value>hbm/Person.hbm.xml</value>
             </list>
         </property>
         <property name="packagesToScan">
@@ -96,10 +97,20 @@ http://www.springframework.org/schema/tx/spring-tx.xsd http://www.alibaba.com/sc
     <bean id="departmentDao" class="com.koali.dao.Impl.DepartmentDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <bean id="personDao" class="com.koali.dao.Impl.PersonDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
     <!--配置事务管理-->
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     <!--开启事务注解-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- 2注解配置组件（代表声明开启注解模式，不加的话三个框架整合的话或许有些问题，或许识别不了标注组件@）-->
+    <context:annotation-config />
+    <!-- 3配置注解的自动扫描范围（多个包配置可配置多个context:component-scan）
+        base-package:需要扫描的包
+     -->
+    <context:component-scan base-package="com.koali.*"/>
 </beans>
