@@ -72,6 +72,12 @@
             </result>
         </action>
 
+        <action name="AccountAction_*" class="com.koali.action.AccountAction" method="{1}">
+            <result name="success">
+                /jsp/test/index.jsp
+            </result>
+        </action>
+
     </package>
 
 </struts>

@@ -3,7 +3,7 @@ package com.koali.pojo;
 import java.util.Date;
 
 public class Person {
-    private int id;
+    private Integer id;
     private String name;
     private String password;
     private Date birthday;
@@ -16,11 +16,11 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

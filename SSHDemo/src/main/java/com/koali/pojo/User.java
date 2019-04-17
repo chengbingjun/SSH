@@ -3,17 +3,17 @@ package com.koali.pojo;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private int id;
+    private Integer id;
     private String name;
     private String sex;
     private String loginName;
     private String loginPwd;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

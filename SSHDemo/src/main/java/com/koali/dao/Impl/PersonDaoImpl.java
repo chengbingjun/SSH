@@ -9,9 +9,7 @@ import org.hibernate.SQLQuery;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public class PersonDaoImpl extends HibernateDaoSupport implements PersonDao {
     @Override
