@@ -1,9 +1,20 @@
 package com.koali.pojo;
 
+import java.util.Date;
+
 public class Person {
     private int id;
     private String name;
-    private String login_pwd;
+    private String password;
+    private Date birthday;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
     public int getId() {
         return id;
@@ -21,11 +32,11 @@ public class Person {
         this.name = name;
     }
 
-    public String getLogin_pwd() {
-        return login_pwd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setLogin_pwd(String login_pwd) {
-        this.login_pwd = login_pwd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

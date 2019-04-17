@@ -1,6 +1,7 @@
 package com.koali.dao;
 
 import com.koali.pojo.Person;
+import com.koali.pojo.PersonModel;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -21,7 +22,7 @@ public class PersonTest {
     @Test
     public void findUserById(){
         Person person = personDao.findUserById(1);
-        System.out.println(person.getLogin_pwd());
+        System.out.println(person.getPassword());
     }
 
     @Test
@@ -29,7 +30,7 @@ public class PersonTest {
         Session session = sessionFactory.openSession();
         Transaction tr = session.beginTransaction();
         Person person = new Person();//瞬时
-        person.setLogin_pwd("5896");
+        person.setPassword("5896");
         person.setName("牛武");
 
         session.save(person);//持久化（是否在这一步打印insert语句和主键策略有关）
@@ -38,5 +39,12 @@ public class PersonTest {
         tr.commit();//游离
         session.close();
         sessionFactory.close();
+    }
+
+    @Test
+    public void getPersonModel(){
+        String name = "马文";
+        PersonModel personModel = personDao.findModelByName1(name);
+        System.out.println(personModel);
     }
 }

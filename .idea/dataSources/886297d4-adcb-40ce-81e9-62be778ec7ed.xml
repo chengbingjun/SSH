@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="ssh@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
     <root id="1"/>
     <schema id="2" parent="1" name="ssh">
       <Current>1</Current>
@@ -35,18 +35,18 @@
     <table id="29" parent="2" name="users"/>
     <column id="30" parent="24" name="CUST_ID">
       <Position>1</Position>
-      <DataType>int(10) unsigned|0</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="31" parent="24" name="NAME">
       <Position>2</Position>
-      <DataType>varchar(100)|0</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="32" parent="24" name="AGE">
       <Position>3</Position>
-      <DataType>int(10) unsigned|0</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="33" parent="24" name="PRIMARY">
@@ -56,17 +56,17 @@
     </key>
     <column id="34" parent="25" name="dir">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="35" parent="25" name="dname">
       <Position>2</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="36" parent="25" name="ddesc">
       <Position>3</Position>
-      <DataType>varchar(100)|0</DataType>
+      <DataType>varchar(100)|0s</DataType>
     </column>
     <key id="37" parent="25" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -75,41 +75,41 @@
     </key>
     <column id="38" parent="26" name="eid">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="39" parent="26" name="ename">
       <Position>2</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="40" parent="26" name="sex">
       <Position>3</Position>
-      <DataType>varchar(10)|0</DataType>
+      <DataType>varchar(10)|0s</DataType>
     </column>
     <column id="41" parent="26" name="birthday">
       <Position>4</Position>
-      <DataType>datetime|0</DataType>
+      <DataType>datetime|0s</DataType>
     </column>
     <column id="42" parent="26" name="joinDate">
       <Position>5</Position>
-      <DataType>datetime|0</DataType>
+      <DataType>datetime|0s</DataType>
     </column>
     <column id="43" parent="26" name="eno">
       <Position>6</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="44" parent="26" name="username">
       <Position>7</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="45" parent="26" name="password">
       <Position>8</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="46" parent="26" name="dno">
       <Position>9</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
     </column>
     <index id="47" parent="26" name="FKliyqiooso8ar5j2n18pry22p2">
       <ColNames>dno</ColNames>
@@ -127,17 +127,17 @@
     </foreign-key>
     <column id="50" parent="27" name="pid">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="51" parent="27" name="pname">
       <Position>2</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="52" parent="27" name="price">
       <Position>3</Position>
-      <DataType>double|0</DataType>
+      <DataType>double|0s</DataType>
     </column>
     <key id="53" parent="27" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -146,18 +146,18 @@
     </key>
     <column id="54" parent="28" name="STOCK_ID">
       <Position>1</Position>
-      <DataType>int(10) unsigned|0</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="55" parent="28" name="STOCK_CODE">
       <Position>2</Position>
-      <DataType>varchar(10)|0</DataType>
+      <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="56" parent="28" name="STOCK_NAME">
       <Position>3</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="57" parent="28" name="UNI_STOCK_ID">
@@ -183,17 +183,17 @@
     </key>
     <column id="62" parent="29" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="63" parent="29" name="NAME">
       <Position>2</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
     <column id="64" parent="29" name="age">
       <Position>3</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
     </column>
     <key id="65" parent="29" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
