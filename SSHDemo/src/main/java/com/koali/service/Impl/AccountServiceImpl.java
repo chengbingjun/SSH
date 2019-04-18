@@ -5,6 +5,8 @@ import com.koali.pojo.Account;
 import com.koali.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -35,7 +37,8 @@ public class AccountServiceImpl implements AccountService {
         Account decrease = getAccountByName(decreaseName);
         Account add = getAccountByName(addName);
         updateAccount(decrease,-num);
-        int i = 1/0;
+        //int i = 1/0;不知道为什么使用了@Transaction注解，在手动添加异常的情况下
+        // 还是出现了一个账户减少了，另一个账户不变的情况，在ssm中无此问题。
         updateAccount(add,num);
         System.out.println(getAccountByName(decreaseName));
         System.out.println(getAccountByName(addName));
